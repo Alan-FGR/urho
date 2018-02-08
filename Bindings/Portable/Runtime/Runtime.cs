@@ -73,7 +73,7 @@ namespace Urho
 			      var component = LookupObject<Component>(target, false);
 			      if (component != null && component.TypeName != component.GetType().Name)
 			      {
-			         var dest = new Serializer(param1);
+			         var dest = new VectorBuffer(param1);
 			         dest.WriteInt(1337);
 
                   //TODO save component assembly-qualified type name before values
@@ -83,7 +83,8 @@ namespace Urho
 			      break;
 			   case CallbackType.Component_Load:
 			   {
-			      var src = new Deserializer(param1);
+			      var src = new VectorBuffer(param1);
+			      src.SeekRelative(-4);
 			      var read = src.ReadInt();
 			   }
 			      break;

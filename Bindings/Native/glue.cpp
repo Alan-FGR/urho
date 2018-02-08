@@ -460,4 +460,24 @@ extern "C" {
 		return deserializer->ReadInt();
 	}
 
+    DllExport
+    bool VectorBuffer_WriteInt(VectorBuffer* buffer, int value)
+    {
+        return buffer->WriteInt(value);
+    }
+
+    DllExport
+    int VectorBuffer_ReadInt(VectorBuffer* buffer)
+    {
+        auto i = buffer->ReadInt();
+        return i;
+    }
+
+    DllExport
+    void VectorBuffer_SeekRelative(VectorBuffer* buffer, int delta)
+    {
+        buffer->SeekRelative(delta);
+    }
+
+
 }

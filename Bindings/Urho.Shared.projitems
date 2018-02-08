@@ -22,7 +22,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Portable\Image.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Portable\RenderPath.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Portable\ScriptInstance.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Portable\Serializer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Serializer.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Portable\SharpReality\TransparentPlaneWithShadows.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Portable\SharpReality\YuvVideo.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Portable\StaticModel.cs" />
@@ -454,5 +454,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)Portable\External\IntVector3.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Portable\Generated\UIComponent.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Portable\Generated\GImpactMeshData.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)VectorBuffer.cs" />
   </ItemGroup>
 </Project>
