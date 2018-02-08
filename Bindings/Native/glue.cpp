@@ -447,4 +447,17 @@ extern "C" {
 	{
 		rpc->SetOutput(index, String(name));
 	}
+
+	DllExport
+	bool Serializer_WriteInt(Serializer* serializer, int value)
+	{
+		return serializer->WriteInt(value);
+	}
+
+	DllExport
+	int Deserializer_ReadInt(Deserializer* deserializer)
+	{
+		return deserializer->ReadInt();
+	}
+
 }

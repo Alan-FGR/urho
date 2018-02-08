@@ -5,7 +5,7 @@ namespace Urho
 {
 	internal static class Consts
 	{
-#if DESKTOP
+#if DESKTOP && !WINDOWS_D3D
 		public const string NativeImport = "mono-urho";
 #elif IOS
 		public const string NativeImport = "@rpath/Urho.framework/Urho";

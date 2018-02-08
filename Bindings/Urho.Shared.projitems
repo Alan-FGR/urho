@@ -9,6 +9,7 @@
     <Import_RootNamespace>Urho</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Deserializer.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Portable\Actions\Instants\Callfunc\TaskSourceAction.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Portable\Actions\Intervals\GenericShaderParameterFromTo.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Portable\Camera.cs" />
@@ -21,6 +22,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Portable\Image.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Portable\RenderPath.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Portable\ScriptInstance.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Portable\Serializer.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Portable\SharpReality\TransparentPlaneWithShadows.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Portable\SharpReality\YuvVideo.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Portable\StaticModel.cs" />

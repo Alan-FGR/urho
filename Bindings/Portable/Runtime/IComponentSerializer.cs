@@ -83,4 +83,13 @@ namespace Urho.Resources
 	}
 
 	//TODO: binary serializer
+
+   public class BinaryComponentSerializer// : IComponentSerializer
+   {
+      public void Serialize(object value)
+      {
+         
+      }
+   }
+
 }

@@ -68,6 +68,25 @@ namespace Urho
 						component?.OnSceneSet(LookupObject<Scene>(param1, false));
 					}
 					break;
+			   case CallbackType.Component_Save:
+			   {
+			      var component = LookupObject<Component>(target, false);
+			      if (component != null && component.TypeName != component.GetType().Name)
+			      {
+			         var dest = new Serializer(param1);
+			         dest.WriteInt(1337);
+
+                  //TODO save component assembly-qualified type name before values
+			         //TODO
+			      }
+			   }
+			      break;
+			   case CallbackType.Component_Load:
+			   {
+			      var src = new Deserializer(param1);
+			      var read = src.ReadInt();
+			   }
+			      break;
 				case CallbackType.Component_SaveXml:
 					{
 						var component = LookupObject<Component>(target, false);
@@ -154,6 +173,10 @@ namespace Urho
 					Urho.Application.ThrowUnhandledException(
 						new Exception(param3 + ". You can omit this exception by subscribing to Urho.Application.UnhandledException event and set Handled property to True.\nApplicationOptions: " + Application.CurrentOptions));
 					break;
+
+            default:
+               Urho.Application.ThrowUnhandledException(new Exception("Unhandled Callback: "+type));
+               break;
 			}
 		}
 

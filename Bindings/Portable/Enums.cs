@@ -99,15 +99,17 @@ namespace Urho {
 
 	internal enum CallbackType
 	{
-		Component_OnSceneSet,
-		Component_SaveXml,
-		Component_LoadXml,
-		Component_AttachedToNode,
-		Component_OnNodeSetEnabled,
+	   Component_OnSceneSet,
+	   Component_SaveXml,
+	   Component_LoadXml,
+	   Component_Save, //binary
+	   Component_Load, //binary
+	   Component_AttachedToNode,
+	   Component_OnNodeSetEnabled,
 
-		RefCounted_AddRef,
-		RefCounted_Delete,
-
-		Log_Write,
+	   RefCounted_AddRef,
+	   RefCounted_Delete,
+    
+	   Log_Write
 	};
 }
